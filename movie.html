@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inception - phimcuaTuan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- 1. Navigation Bar -->
+    <header class="navbar" style="background-color: #141414;">
+        <div class="nav-container">
+            <a href="index.html" class="logo">phimcua<span>Tuan</span></a>
+
+            <nav class="nav-menu">
+                <a href="index.html">Trang chủ</a>
+                <a href="phim-le.html">Phim lẻ</a>
+                <a href="phim-bo.html">Phim bộ</a>
+                <a href="the-loai.html">Thể loại</a>
+                <a href="quoc-gia.html">Quốc gia</a>
+                <a href="labs.html">Lab thực hành</a>
+            </nav>
+
+            <div class="nav-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm phim...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <a href="auth.html" class="btn btn-login">Đăng nhập</a>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Player Section -->
+    <section class="player-container" style="padding-top: 80px; background-color: #000; display: flex; justify-content: center; align-items: center; min-height: 500px;">
+        <div class="video-wrapper" style="width: 100%; max-width: 1200px; aspect-ratio: 16/9; background-color: #1a1a1a; position: relative;">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YoHD9XEInc0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+        </div>
+    </section>
+
+    <!-- 3. Movie Actions Bar -->
+    <div class="movie-actions-bar container">
+        <div class="movie-stats">
+            <span><i class="fas fa-eye"></i> 1.2M lượt xem</span>
+            <span><i class="fas fa-star" style="color: #f1c40f;"></i> 8.8 Điểm</span>
+        </div>
+        <div class="action-buttons">
+            <button class="btn btn-secondary"><i class="fas fa-heart"></i> Yêu thích</button>
+            <button class="btn btn-secondary"><i class="fas fa-share-alt"></i> Chia sẻ</button>
+            <button class="btn btn-secondary"><i class="fas fa-flag"></i> Báo lỗi</button>
+        </div>
+    </div>
+
+    <!-- 4. Movie Details Content -->
+    <section class="container" style="padding-bottom: 50px;">
+        <div class="movie-content-grid">
+            <div class="movie-details-box">
+                <h1 class="movie-title">Inception (Kẻ Đánh Cắp Giấc Mơ)</h1>
+                <div class="movie-meta">
+                    <span class="quality">FHD / Vietsub</span>
+                    <span>2010</span>
+                    <span>148 Phút</span>
+                    <span>Hành động, Viễn tưởng</span>
+                </div>
+                <div class="movie-synopsis" style="margin-top: 20px; line-height: 1.6; color: #ccc;">
+                    <p><strong>Nội dung phim:</strong></p>
+                    <p>Kẻ cắp giấc mơ (Inception) là một bộ phim điện ảnh hành động viễn tưởng của Mỹ năm 2010 do Christopher Nolan viết kịch bản, đạo diễn và đồng sản xuất. Bộ phim xoay quanh Dom Cobb (Leonardo DiCaprio), một đạo chích tài giỏi, có khả năng xâm nhập vào tiềm thức của người khác để đánh cắp những bí mật sâu kín nhất của họ thông qua những giấc mơ. Kỹ năng đặc biệt này khiến anh trở thành một nhân vật được săn đón trong giới tình báo doanh nghiệp, nhưng cũng khiến anh mất đi mọi thứ anh yêu quý. Để chuộc lại lỗi lầm và trở về bên các con, Cobb phải thực hiện một nhiệm vụ dường như bất khả thi: "Inception" - thay vì đánh cắp, anh phải cấy một ý tưởng vào sâu trong tiềm thức của người thừa kế một đế chế kinh doanh.</p>
+                </div>
+                <div class="cast-info" style="margin-top: 20px;">
+                    <p><strong>Đạo diễn:</strong> Christopher Nolan</p>
+                    <p><strong>Diễn viên:</strong> Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Tom Hardy, Ken Watanabe</p>
+                    <p><strong>Quốc gia:</strong> Mỹ, Anh</p>
+                </div>
+            </div>
+            
+            <div class="related-movies" style="margin-left: 20px;">
+                <!-- Could add a sidebar for related movies here, but grid handles it in CSS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <a href="#" class="logo">phimcua<span>Tuan</span></a>
+                <p>Website xem phim trực tuyến miễn phí chất lượng cao, cập nhật nhanh nhất các bộ phim hot.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/tran.manh.tuan.381182/about/?fb_profile_edit_entry_point=%7B%22click_point%22%3A%22edit_profile_button%22%2C%22feature%22%3A%22profile_header%22%7D&id=100050201733361&sk=about" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Danh mục</h3>
+                <a href="#">Phim Mới</a>
+                <a href="#">Phim Lẻ</a>
+                <a href="#">Phim Bộ</a>
+                <a href="#">Chiếu Rạp</a>
+            </div>
+            <div class="footer-col">
+                <h3>Hỗ trợ</h3>
+                <a href="#">Liên hệ</a>
+                <a href="#">Điều khoản sử dụng</a>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Khiếu nại bản quyền</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 phimcuaTuan. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+
+</html>
