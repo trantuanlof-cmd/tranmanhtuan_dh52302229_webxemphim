@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>phimcuaTuan - Xem phim trực tuyến</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- 1. Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">phimcua<span>Tuan</span></a>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="active">Trang chủ</a>
+                <a href="phim-le.html">Phim lẻ</a>
+                <a href="phim-bo.html">Phim bộ</a>
+                <a href="the-loai.html">Thể loại</a>
+                <a href="quoc-gia.html">Quốc gia</a>
+                <a href="labs.html">Lab thực hành</a>
+            </nav>
+
+            <div class="nav-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm phim...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <a href="auth.html" class="btn btn-login">Đăng nhập</a>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section class="hero"
+        style="background-image: linear-gradient(to right, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.1)), url('img/hero.jpg');">
+        <div class="hero-content">
+            <span class="badge">Phim Mới Nổi Bật</span>
+            <h1 class="hero-title">Inception</h1>
+            <div class="hero-meta">
+                <span>2010</span>
+                <span class="quality">FHD / Vietsub</span>
+                <span><i class="fas fa-star"></i> 8.8</span>
+                <span>148 phút</span>
+            </div>
+            <p class="hero-desc">Kẻ cắp giấc mơ - Một siêu phẩm viễn tưởng của Christopher Nolan. Dom Cobb là một tên
+                trộm tài ba, có khả năng xâm nhập vào tiềm thức của người khác khi họ đang ngủ.</p>
+            <div class="hero-actions">
+                <a href="movie.html" class="btn btn-primary"><i class="fas fa-play"></i> Xem Ngay</a>
+                <a href="#" class="btn btn-secondary"><i class="fas fa-plus"></i> Thêm Danh Sách</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Movie Grid - Phim Mới Cập Nhật -->
+    <section class="movie-section container">
+        <div class="section-header">
+            <h2>Phim Mới Cập Nhật</h2>
+            <a href="#" class="view-all">Xem tất cả <i class="fas fa-chevron-right"></i></a>
+        </div>
+
+        <!-- Filter Form -->
+        <div class="filter-container">
+            <form class="filter-form" action="#">
+                <div class="filter-group">
+                    <select name="type" class="filter-select">
+                        <option value="">-- Loại Phim --</option>
+                        <option value="phim-le">Phim lẻ</option>
+                        <option value="phim-bo">Phim bộ</option>
+                        <option value="chieu-rap">Phim chiếu rạp</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select name="genre" class="filter-select">
+                        <option value="">-- Thể loại --</option>
+                        <option value="hanh-dong">Hành động</option>
+                        <option value="tinh-cam">Tình cảm</option>
+                        <option value="kinh-di">Kinh dị</option>
+                        <option value="hai-huoc">Hài hước</option>
+                        <option value="vien-tuong">Viễn tưởng</option>
+                        <option value="tam-ly">Tâm lý</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select name="country" class="filter-select">
+                        <option value="">-- Quốc gia --</option>
+                        <option value="au-my">Âu Mỹ</option>
+                        <option value="han-quoc">Hàn Quốc</option>
+                        <option value="trung-quoc">Trung Quốc</option>
+                        <option value="nhat-ban">Nhật Bản</option>
+                        <option value="viet-nam">Việt Nam</option>
+                        <option value="thai-lan">Thái Lan</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select name="year" class="filter-select">
+                        <option value="">-- Năm --</option>
+                        <option value="2026">2026</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-filter"></i> Lọc Phim</button>
+            </form>
+        </div>
+
+        <div class="movie-grid">
+            <!-- Movie Card 1 -->
+            <a href="movie.html" class="movie-card">
+                <div class="card-img">
+                    <img src="img/movie1.jpg" alt="Movie">
+                    <div class="card-badges">
+                        <span class="badge quality">HD</span>
+                        <span class="badge sub">Vietsub</span>
+                    </div>
+                    <div class="play-overlay"><i class="fas fa-play"></i></div>
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">Interstellar</h3>
+                    <div class="card-meta">
+                        <span class="year">2014</span>
+                        <span class="rating"><i class="fas fa-star"></i> 8.6</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Movie Card 2 -->
+            <a href="movie.html" class="movie-card">
+                <div class="card-img">
+                    <img src="img/movie2.jpg" alt="Movie">
+                    <div class="card-badges">
+                        <span class="badge quality">CAM</span>
+                        <span class="badge sub">Thuyết minh</span>
+                    </div>
+                    <div class="play-overlay"><i class="fas fa-play"></i></div>
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">The Dark Knight</h3>
+                    <div class="card-meta">
+                        <span class="year">2008</span>
+                        <span class="rating"><i class="fas fa-star"></i> 9.0</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Movie Card 3 -->
+            <a href="movie.html" class="movie-card">
+                <div class="card-img">
+                    <img src="img/movie3.jpg" alt="Movie">
+                    <div class="card-badges">
+                        <span class="badge quality">HD</span>
+                        <span class="badge sub">Vietsub</span>
+                    </div>
+                    <div class="play-overlay"><i class="fas fa-play"></i></div>
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">Dune: Part Two</h3>
+                    <div class="card-meta">
+                        <span class="year">2024</span>
+                        <span class="rating"><i class="fas fa-star"></i> 8.9</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Movie Card 4 -->
+            <a href="movie.html" class="movie-card">
+                <div class="card-img">
+                    <img src="img/movie4.jpg" alt="Movie">
+                    <div class="card-badges">
+                        <span class="badge quality">FHD</span>
+                        <span class="badge sub">Vietsub</span>
+                    </div>
+                    <div class="play-overlay"><i class="fas fa-play"></i></div>
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">Oppenheimer</h3>
+                    <div class="card-meta">
+                        <span class="year">2023</span>
+                        <span class="rating"><i class="fas fa-star"></i> 8.4</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Movie Card 5 -->
+            <a href="movie.html" class="movie-card">
+                <div class="card-img">
+                    <img src="img/movie5.jpg" alt="Movie">
+                    <div class="card-badges">
+                        <span class="badge quality">HD</span>
+                        <span class="badge sub">Vietsub</span>
+                    </div>
+                    <div class="play-overlay"><i class="fas fa-play"></i></div>
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">Stranger Things S4</h3>
+                    <div class="card-meta">
+                        <span class="year">2022</span>
+                        <span class="rating"><i class="fas fa-star"></i> 8.7</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- 4. Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <a href="#" class="logo">phimcua<span>Tuan</span></a>
+                <p>Website xem phim trực tuyến miễn phí chất lượng cao, cập nhật nhanh nhất các bộ phim hot.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/tran.manh.tuan.381182/about/?fb_profile_edit_entry_point=%7B%22click_point%22%3A%22edit_profile_button%22%2C%22feature%22%3A%22profile_header%22%7D&id=100050201733361&sk=about" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Danh mục</h3>
+                <a href="#">Phim Mới</a>
+                <a href="#">Phim Lẻ</a>
+                <a href="#">Phim Bộ</a>
+                <a href="#">Chiếu Rạp</a>
+            </div>
+            <div class="footer-col">
+                <h3>Hỗ trợ</h3>
+                <a href="#">Liên hệ</a>
+                <a href="#">Điều khoản sử dụng</a>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Khiếu nại bản quyền</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 phimcuaTuan. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+
+</html>

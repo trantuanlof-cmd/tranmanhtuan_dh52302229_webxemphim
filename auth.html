@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập / Đăng ký - phimcuaTuan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="auth-page" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('img/hero.jpg');">
+
+    <header class="navbar auth-navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">phimcua<span>Tuan</span></a>
+            <nav class="nav-menu">
+                <a href="index.html">Trang chủ</a>
+                <a href="labs.html">Lab thực hành</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="auth-container">
+        <!-- ĐĂNG NHẬP -->
+        <div class="auth-box" id="login-box">
+            <h2>Đăng nhập</h2>
+            <form action="index.html">
+                <div class="input-group">
+                    <input type="text" required>
+                    <label>Email hoặc Số điện thoại</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" required>
+                    <label>Mật khẩu</label>
+                </div>
+                <button type="submit" class="btn btn-primary auth-btn">Đăng nhập</button>
+                
+                <div class="auth-actions">
+                    <label><input type="checkbox"> Ghi nhớ tôi</label>
+                    <a href="#">Quên mật khẩu?</a>
+                </div>
+                
+                <div class="auth-switch">
+                    Bạn mới tham gia phimcuaTuan? <a href="#register-box" onclick="toggleAuth('register')">Đăng ký ngay.</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- ĐĂNG KÝ (Mặc định ẩn bằng CSS, nhưng ta dùng Flex/Display để chuyển bằng JS nhỏ) -->
+        <div class="auth-box" id="register-box" style="display: none;">
+            <h2>Đăng ký</h2>
+            <form action="index.html">
+                <div class="input-group">
+                    <input type="text" required>
+                    <label>Tên đăng nhập</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" required>
+                    <label>Mật khẩu</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" required>
+                    <label>Nhập lại Mật khẩu</label>
+                </div>
+                <button type="submit" class="btn btn-primary auth-btn">Đăng ký</button>
+                
+                <div class="auth-actions">
+                    <label><input type="checkbox" required> Tôi đồng ý với Điều khoản sử dụng</label>
+                </div>
+                
+                <div class="auth-switch">
+                    Đã có tài khoản? <a href="#login-box" onclick="toggleAuth('login')">Đăng nhập.</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleAuth(type) {
+            if (type === 'register') {
+                document.getElementById('login-box').style.display = 'none';
+                document.getElementById('register-box').style.display = 'block';
+            } else {
+                document.getElementById('register-box').style.display = 'none';
+                document.getElementById('login-box').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
